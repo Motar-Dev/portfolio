@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+@plugin 'tailwind-scrollbar';
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-zinc-900 text-zinc-50 h-[200vh];
+}
