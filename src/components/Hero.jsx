@@ -29,7 +29,7 @@ const Hero = () => {
             Building Scalable Modern Websites for the Future
           </h2>
 
-          <div className='flex items-center gap-3'>
+          <div className='flex items-center gap-16 lg:gap-3 max-lg:justify-center'>
             <ButtonPrimary label='Download CV' icon='download' />
 
             <ButtonOutline
@@ -40,8 +40,8 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className='hidden lg:block'>
-          <figure className='w-full max-w-[480px] ml-auto bg-linear-to-t from-sky-400 via-25% via-sky-40 to-65% rounded-[60px] overflow-hidden'>
+        <div className='flex justify-center max-lg:mt-5'>
+          <figure className='w-full max-w-[480px] lg:ml-auto bg-linear-to-t from-sky-400 via-25% via-sky-40 to-65% rounded-[60px] overflow-hidden'>
             <img
               src='images/img.png'
               alt='img'
