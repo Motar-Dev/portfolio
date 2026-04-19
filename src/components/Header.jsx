@@ -22,7 +22,9 @@ const Header = () => {
               className='menu-btn'
               onClick={() => setNavOpen((prev) => !prev)}
             >
-              <span className='material-symbols-rounded'>menu</span>
+              <span className='material-symbols-rounded'>
+                {navOpen ? 'close' : 'menu'}
+              </span>
             </button>
           </div>
           <Navbar navOpen={navOpen} />
