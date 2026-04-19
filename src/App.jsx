@@ -1,8 +1,17 @@
+/**
+ * Styling
+ */
 import './index.css';
+
+/**
+ * Components
+ */
+import Header from './components/Header';
+
 function App() {
   return (
     <div>
-      <h1 className=''>test</h1>
+      <Header />
     </div>
   );
 }
