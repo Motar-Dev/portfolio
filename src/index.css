@@ -65,6 +65,9 @@ body {
 .section {
   @apply pt-10;
 }
+.footer {
+  @apply pb-10;
+}
 
 /* --------------- */
 /* Components
@@ -107,6 +110,10 @@ body {
 
 .btn-secondary {
   @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80;
+}
+
+.hide-contact-btn {
+  @apply max-md:hidden md:justify-self-end;
 }
 
 .btn .material-symbols-rounded {

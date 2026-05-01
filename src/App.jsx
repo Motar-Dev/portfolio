@@ -11,17 +11,19 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skill from './components/Skill';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <>
       <Header />
-      <main>
+      <main className='mb-20'>
         <Hero />
         <About />
         <Skill />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 }
