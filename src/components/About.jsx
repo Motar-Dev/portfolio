@@ -1,11 +1,21 @@
-import React from 'react';
+import { motion } from 'framer-motion';
+import { slideIn, staggerContainer, textVariant } from '../utils/motion';
 
 const About = () => {
   return (
     <section id='about' className='section'>
-      <div className='container'>
-        <div className='bg-zinc-800/50 p-7 rounded-2xl md:p-12'>
-          <p className='text-zinc-300 text-xl md:max-w-[60ch] mb-4 md:mb-8'>
+      <motion.div
+        className='container'
+        variants={staggerContainer}
+        initial='hidden'
+        whileInView='show'
+        viewport={{ once: false, amount: 0.25 }}
+      >
+        <motion.div
+          variants={textVariant(0.4)}
+          className='bg-zinc-800/50 p-7 rounded-2xl md:p-12'
+        >
+          <p className='text-zinc-300 text-xl mb-4 md:mb-8'>
             Welcome! I'm Mohammed, a Software developer, lifelong learner,
             experienced in HTML, CSS/SCSS, Javascript, PHP, MongoDB and Drupal.
             I work across the Full Stack, building robust applications and
@@ -26,8 +36,8 @@ const About = () => {
               <p className='text-sm text-zinc-400'>Years of experience</p>
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
