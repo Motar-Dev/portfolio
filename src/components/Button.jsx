@@ -1,9 +1,21 @@
 import PropTypes from 'prop-types';
 
-const ButtonPrimary = ({ href, target = '_self', label, icon, classes }) => {
+const ButtonPrimary = ({
+  href,
+  target = '_self',
+  download = '',
+  label,
+  icon,
+  classes,
+}) => {
   if (href) {
     return (
-      <a href={href} target={target} className={'btn btn-primary ' + classes}>
+      <a
+        href={href}
+        target={target}
+        download={download}
+        className={'btn btn-primary ' + classes}
+      >
         {label}
 
         {icon ? (

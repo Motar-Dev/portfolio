@@ -10,14 +10,6 @@ const sitemap = [
     href: '#about',
   },
   {
-    label: 'Work',
-    href: '#work',
-  },
-  {
-    label: 'Reviews',
-    href: '#reviews',
-  },
-  {
     label: 'Contact me',
     href: '#contact',
   },
@@ -26,15 +18,15 @@ const sitemap = [
 const socials = [
   {
     label: 'GitHub',
-    href: 'https://www.github.com/codewithsadee-org',
+    href: 'https://github.com/Motar-Dev',
   },
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/codewithsadee',
+    href: 'https://www.linkedin.com/in/mohammed-motar-803b6a1b3/',
   },
   {
     label: 'Instagram',
-    href: 'https://www.instagram.com/codewithsadee',
+    href: '',
   },
 ];
 

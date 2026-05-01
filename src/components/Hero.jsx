@@ -1,12 +1,29 @@
 import React from 'react';
 import { ButtonOutline, ButtonPrimary } from './Button';
+import { motion } from 'framer-motion';
+import {
+  fadeIn,
+  slideIn,
+  staggerContainer,
+  textVariant,
+  zoomIn,
+} from '../utils/motion';
 
 const Hero = () => {
   return (
     <section id='home' className='pt-28 lg:pt-36'>
-      <div className='container lg:grid lg:grid-cols-2 items-center lg:gap-10'>
+      <motion.div
+        className='container lg:grid lg:grid-cols-2 items-center lg:gap-10'
+        variants={staggerContainer}
+        initial='hidden'
+        whileInView='show'
+        viewport={{ once: false, amount: 0.25 }}
+      >
         <div>
-          <div className='flex items-center gap-3'>
+          <motion.div
+            variants={slideIn('up', '', 0.2, 1)}
+            className='flex items-center gap-3'
+          >
             <figure className='img-box w-9 h-9 rounded-lg'>
               <img
                 src='/images/profile.jpg'
@@ -23,35 +40,54 @@ const Hero = () => {
               </span>
               Available for work
             </div>
-          </div>
+          </motion.div>
 
-          <h2 className='headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10'>
+          <motion.h2
+            className='headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10'
+            variants={fadeIn('right', 'tween', 0.2, 1)}
+          >
             Building Scalable Modern Websites for the Future
-          </h2>
+          </motion.h2>
 
           <div className='flex items-center gap-16 lg:gap-3 max-lg:justify-center'>
-            <ButtonPrimary label='Download CV' icon='download' />
+            <form action=''>
+              <motion.div variants={zoomIn(0.2, 0.6)}>
+                <ButtonPrimary
+                  href='/files/cv.pdf'
+                  label='Download CV'
+                  icon='download'
+                  target='_blank'
+                  download='proposed_file_name'
+                />
+              </motion.div>
+            </form>
 
-            <ButtonOutline
-              href='#about'
-              label='Scroll down'
-              icon='arrow_downward'
-            />
+            <motion.div variants={zoomIn(0.2, 0.6)}>
+              <ButtonOutline
+                href='#about'
+                label='Scroll down'
+                icon='arrow_downward'
+              />
+            </motion.div>
           </div>
         </div>
 
         <div className='flex justify-center max-lg:mt-5'>
-          <figure className='w-full max-w-[480px] lg:ml-auto bg-linear-to-t from-sky-400 via-25% via-sky-40 to-65% rounded-[60px] overflow-hidden'>
-            <img
+          <motion.figure
+            variants={fadeIn('up', 'tween', 0.3, 0.5)}
+            className='w-full max-w-[480px] lg:ml-auto bg-linear-to-t from-sky-400 via-25% via-sky-40 to-65% rounded-[60px] overflow-hidden'
+          >
+            <motion.img
+              variants={fadeIn('up', 'tween', 0.2, 1)}
               src='images/img.png'
               alt='img'
               className='w-full'
               width={656}
               height={800}
             />
-          </figure>
+          </motion.figure>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

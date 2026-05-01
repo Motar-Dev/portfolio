@@ -1,14 +1,17 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { CiLinkedin } from 'react-icons/ci';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const socialLinks = [
   {
     Icon: FaGithub,
-    link: 'https://github.com/Motar-Dev?tab=repositories',
+    link: 'https://github.com/Motar-Dev',
   },
   {
     Icon: FaLinkedin,
     link: 'https://www.linkedin.com/in/mohammed-motar-803b6a1b3/',
+  },
+  {
+    Icon: FaInstagram,
+    link: '',
   },
 ];
 
