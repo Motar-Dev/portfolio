@@ -1,4 +1,6 @@
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/motion';
 
 const socialLinks = [
   {
@@ -18,7 +20,13 @@ const socialLinks = [
 const Contact = () => {
   return (
     <section className='section' id='contact'>
-      <div className='container lg:grid lg:grid-cols-2 lg:items-stretch'>
+      <motion.div
+        variants={fadeIn('up', 'tween', 0.3, 1)}
+        initial='hidden'
+        whileInView='show'
+        viewport={{ once: false, amount: 0.25 }}
+        className='container lg:grid lg:grid-cols-2 lg:items-stretch'
+      >
         <div className='mb-12 lg:mb-0 lg:flex lg:flex-col'>
           <h2 className='headline-2 lg:max-w-[12ch]'>
             Contact me for collaboration
@@ -98,7 +106,7 @@ const Contact = () => {
             </button>
           </div>
         </form>
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -1,13 +1,6 @@
-import React from 'react';
 import { ButtonOutline, ButtonPrimary } from './Button';
 import { motion } from 'framer-motion';
-import {
-  fadeIn,
-  slideIn,
-  staggerContainer,
-  textVariant,
-  zoomIn,
-} from '../utils/motion';
+import { fadeIn, slideIn, staggerContainer, zoomIn } from '../utils/motion';
 
 const Hero = () => {
   return (

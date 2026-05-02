@@ -1,4 +1,4 @@
-import React from 'react';
+import { motion } from 'framer-motion';
 
 const sitemap = [
   {
@@ -31,12 +31,19 @@ const socials = [
 ];
 
 import { ButtonPrimary } from './Button';
+import { fadeIn } from '../utils/motion';
 
 const Footer = () => {
   return (
     <footer className='footer'>
       <div className='container'>
-        <div className='lg:grid lg:grid-cols-2'>
+        <motion.div
+          variants={fadeIn('up', 'tween', 0.3, 1)}
+          initial='hidden'
+          whileInView='show'
+          viewport={{ once: false, amount: 0.25 }}
+          className='lg:grid lg:grid-cols-2'
+        >
           <div className='mb-10'>
             <h2 className='headline-1 mb-8 lg:max-w-[12ch]'>
               Let&apos;s work together today!
@@ -83,7 +90,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

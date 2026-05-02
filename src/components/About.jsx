@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { slideIn, staggerContainer, textVariant } from '../utils/motion';
+import { staggerContainer, textVariant } from '../utils/motion';
 
 const About = () => {
   return (
